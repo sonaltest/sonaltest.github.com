@@ -1,0 +1,23 @@
++ start
+- Hey there! Wondering whether this is correct size for you?{topic=step1}
+
+> topic step1
+  + (yes|yeah)
+  - I can help you.\n
+  ^ Do you have a similar dress already in your wardrobe for reference?{topic=step2}
+< topic
+
+> topic step2
+  + (yes|yeah)
+  - What brand and size is it?
+
+  + *
+  - Great! I think size M will be perfect for you.
+  
+  + (no|nope|nah)
+  - No Problem, can you give me some of the measurements so that I can help you finding right size?{topic=measure1}
+< topic
+
+> topic measure1
+  + *
+  - Great! Based on the measurements I think size M will be perfect for you.
